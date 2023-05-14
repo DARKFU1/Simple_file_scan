@@ -30,7 +30,7 @@ int main(const int argc, const char** argv)
 	int lines = 0;
 	unsigned int words = 0;
 
-	char buffer[64000];
+	char buffer = malloc(10000000);
 
 	while(inp != EOF)
 	{
@@ -58,6 +58,8 @@ int main(const int argc, const char** argv)
 	printf("Words: %i\n", words + 1);
 	printf("Symbols: %i\n", i - 1);
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
+
+ free(buffer);
 
 	return 0;
 }
